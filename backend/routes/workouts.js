@@ -5,6 +5,9 @@ const express= require('express')
 // 2
 const router = express.Router()
 
+// nom install mongoose
+// ODM library: object-data-model
+
 // GET all workouts
 router.get('/', (req, res) => {
     res.json({msg: 'GET all workouts'})
