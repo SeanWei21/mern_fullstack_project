@@ -17,6 +17,9 @@ const app= express()
 //     // Invoke 'next' arg to proceed to next code
 //     next()
 // })
+
+// This is considered Middlewasre
+// Allows to access req in routes/workouts.js
 app.use(express.json())
 
 
