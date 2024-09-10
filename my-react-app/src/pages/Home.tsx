@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
 
-import WorkoutDetails from '../components/WorkoutDetails'
+// Model/types
 import workoutType from "../model/model"
+
+// Components
+import WorkoutDetails from '../components/WorkoutDetails'
+import WorkoutForm from "../components/WorkoutForm"
 
 
 const Home  = () => {
@@ -34,6 +38,7 @@ const Home  = () => {
                     ))
                 }
             </div>
+            <WorkoutForm></WorkoutForm>
         </div>
     )
 }
