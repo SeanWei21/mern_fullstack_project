@@ -1,6 +1,7 @@
 // Get from .env file
 require('dotenv').config()
 
+const cors = require('cors');
 
 // 1. Get Express from node module
 const express= require('express')
@@ -18,10 +19,13 @@ const app= express()
 //     next()
 // })
 
-// This is considered Middlewasre
+// This is considered Middleware
 // Allows to access req in routes/workouts.js
 app.use(express.json())
 
+
+//
+app.use(cors())
 
 //// routes
 // app.get('/', (req, res) =>{
