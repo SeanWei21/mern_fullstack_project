@@ -7,7 +7,7 @@ interface State {
 }
 
 interface Action {
-    type: 'SET_WORKOUTS' | 'CREATE_WORKOUT';
+    type: 'SET_WORKOUTS' | 'CREATE_WORKOUT' | 'DELETE_WORKOUT';
     payload: workoutType;
 }
 
@@ -37,6 +37,10 @@ const WorkoutsReducer = (state:State, action:Action):State => {
         case 'CREATE_WORKOUT':
             return {workouts: [action.payload, ...state.workouts]}
 
+        // Filter out the deleted workout if id match
+        case 'DELETE_WORKOUT':
+            return {workouts: state.workouts.filter(w => w._id !== action.payload._id)}
+
         default:
             return state
     }
@@ -49,9 +53,6 @@ const WorkoutContextProvider= ({children}: {children: React.JSX.Element}) => {
     const [state, dispatch]= useReducer<React.Reducer<State, Action>>(WorkoutsReducer, {
         workouts:[]
     })
-
-    console.log(state)
-    console.log(dispatch)
 
     return (
         <WorkoutsContext.Provider value={ state }>
