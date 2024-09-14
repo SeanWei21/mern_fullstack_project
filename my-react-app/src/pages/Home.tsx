@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react"
-
-// Model/types
-import workoutType from "../model/model"
+import { useEffect} from "react"
 
 // Components
 import WorkoutDetails from '../components/WorkoutDetails'

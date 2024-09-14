@@ -1,6 +1,7 @@
 import workoutType from "../model/model"
 
-import { useWorkoutContext, useWorkoutDispatchContext } from "../hooks/useWorkoutsContext"
+import { useWorkoutDispatchContext } from "../hooks/useWorkoutsContext"
+import { formatDistanceToNow } from "date-fns";
 
 const WorkoutDetails = ({ workout }: { workout: workoutType }) => {
     const dispatch= useWorkoutDispatchContext()
@@ -23,8 +24,8 @@ const WorkoutDetails = ({ workout }: { workout: workoutType }) => {
             <h4>{workout.title}</h4>
             <p><strong>Load (kg): </strong> {workout.load.toString()} </p>
             <p><strong>Reps: </strong> {workout.reps.toString()} </p>
-            <p>{workout.createdAt}</p>
-            <span onClick={handleClick}>Delete</span>
+            <p>{formatDistanceToNow(new Date(workout.createdAt.toString()), {addSuffix: true}) }</p>
+            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
     )
 }
