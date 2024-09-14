@@ -33,6 +33,19 @@ const createWorkout = async (req, res)=>{
     // deconstruct
     const {title, load, reps} = req.body
 
+    // Error checking
+    let emptyFields= []
+
+    if (!title) {
+        emptyFields.push('title')
+    } if (!load) {
+        emptyFields.push('load')
+    } if (!reps) {
+        emptyFields.push('reps')
+    } if (emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Please fill in all fields', emptyFields })
+    }
+
     try {
         const workout= await workoutModel.create({title, load, reps})
         res.status(200).json(workout)
@@ -41,8 +54,6 @@ const createWorkout = async (req, res)=>{
         // sends back error status
         res.status(400).json({error: error.message})
     }
-
-    // res.json({mssg: 'POST a new workout'})
 }
 
 // delete a workout
