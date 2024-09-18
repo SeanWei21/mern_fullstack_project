@@ -18,7 +18,7 @@ const Home  = () => {
 
         // should create async function inside
         const fetchWorkouts = async () => {
-            const response= await fetch('http://localhost:4000/api/workouts/')
+            const response= await fetch(import.meta.env.VITE_SERVER_URI+'/api/workouts/')
             const resJson= await response.json()
 
             if (response.ok) {

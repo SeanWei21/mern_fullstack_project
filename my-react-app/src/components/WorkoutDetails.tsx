@@ -8,7 +8,7 @@ const WorkoutDetails = ({ workout }: { workout: workoutType }) => {
 
     // method to delete 1 workout from servers
     const handleClick = async() => {
-        const response= await fetch('http://localhost:4000/api/workouts/'+ workout._id, {
+        const response= await fetch(import.meta.env.VITE_SERVER_URI+'/api/workouts/'+ workout._id, {
             method: 'DELETE'
         })
 
