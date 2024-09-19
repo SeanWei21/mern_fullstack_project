@@ -1,5 +1,10 @@
 import { useEffect} from "react"
 
+// Bootstrap
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 // Components
 import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from "../components/WorkoutForm"
@@ -32,15 +37,21 @@ const Home  = () => {
 
     return (
         <div className="home">
-            <div className="workouts">
-                {/* Logic will only run if if workouts is not null*/}
-
-                {state.workouts.map((workout) => (
-                        <WorkoutDetails key={String(workout._id)} workout={workout}/>
-                    ))
-                }
-            </div>
-            <WorkoutForm></WorkoutForm>
+            <Container fluid>
+                <Row>
+                    <Col lg={true}>
+                        <WorkoutForm></WorkoutForm>
+                        </Col>
+                    <Col lg={true}>
+                        <div>
+                            {state.workouts.map((workout) => (
+                                    <WorkoutDetails key={String(workout._id)} workout={workout}/>
+                                ))
+                            }
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
