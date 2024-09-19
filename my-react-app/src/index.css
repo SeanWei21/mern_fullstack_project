@@ -6,6 +6,7 @@
   --primary: #1aac83;
   --error: #e7195a;
 }
+
 body {
   background: #f1f1f1;
   margin: 0;
@@ -28,16 +29,14 @@ header a {
 }
 .pages{
   max-width: 1400px;
-  padding: 20px;
+  padding-top: 100px;
   margin: 0 auto;
 }
 
-/* homepage */
-.home {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+.navbar-brand-color {
+  color: #006400; /* Dark green color (you can adjust the hex code as needed) */
 }
+
 .workout-details {
   background: #fff;
   border-radius: 4px;

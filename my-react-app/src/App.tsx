@@ -1,20 +1,18 @@
-import './App.css'
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages and components
 import Home from './pages/Home'
-import Navbar from './components/Navbar'
+import NavigationBar from './components/Navbar'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
 
     <>
       {/* surrounds routing */}
         <BrowserRouter>
-        <Navbar></Navbar>
+        <NavigationBar></NavigationBar>
         <div className='pages'>
           <Routes>
             <Route path="/" element={<Home/>}/>
