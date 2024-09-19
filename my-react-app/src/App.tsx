@@ -4,12 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Pages and components
 import Home from './pages/Home'
 import NavigationBar from './components/Navbar'
+import Popup from './components/Popup';
 
 function App() {
 
   return (
 
     <>
+      <Popup></Popup>
       {/* surrounds routing */}
         <BrowserRouter>
         <NavigationBar></NavigationBar>
