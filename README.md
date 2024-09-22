@@ -28,4 +28,6 @@ Simple MERN full stack project, a web app that records your workout. Involves Mo
 **Frontend and Backend Host**: <a href="https://render.com">Render.com</a><br/><br/>
 
 ## 🔲 Structure<br/>
-![overview drawio (1)](https://github.com/user-attachments/assets/bacfd33d-7c81-4015-8d94-bcf55088a060)
+
+![overview drawio (3)](https://github.com/user-attachments/assets/f93e9bb3-290a-4a4e-9588-6c415abbc882)
+
