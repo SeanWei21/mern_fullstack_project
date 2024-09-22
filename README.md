@@ -1,8 +1,6 @@
 ## 🤝 Connect with me:
 ### <a href="https://www.linkedin.com/in/sean-wei-lee-40918415b"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Lee Sean Wei | LinkedIn" width="35px"/> **Lee Sean Wei**<br/><br/><br/> </a>
 
-
-
 ## 📝 Introduction
 
 
@@ -30,5 +28,4 @@ Simple MERN full stack project, a web app that records your workout. Involves Mo
 **Frontend and Backend Host**: <a href="https://render.com">Render.com</a><br/><br/>
 
 ## 🔲 Structure<br/>
-![overview drawio](https://github.com/user-attachments/assets/5ec62095-f0f6-4bfe-bc95-0ea4041e35df)
-
+![overview drawio (1)](https://github.com/user-attachments/assets/bacfd33d-7c81-4015-8d94-bcf55088a060)
